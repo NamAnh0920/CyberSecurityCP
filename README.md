@@ -1,4 +1,4 @@
-# Project 9 - Pentesting Live Targets
+# Pentesting Live Targets
 
 Time spent: **24** hours spent in total
 
